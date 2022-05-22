@@ -49,21 +49,21 @@ int main(){
 	std::cout << std::endl;
     */
 
-    //Modifying with operator[] and at()
+    //modifying with operator[] and at()
     /*
-    std::string str1 {"Hello there"};
-    str1[0] = 'B';
+    std::string str1 {"hello there"};
+    str1[0] = 'b';
     str1.at(1) = 'a';
     std::cout << "str1(modified) : " << str1 << std::endl;
     */
 
-    //Getting the front and back characters
+    //getting the front and back characters
     /*
-    std::string str2{"The Phoenix King"};    
+    std::string str2{"the phoenix king"};    
     char& front_char = str2.front();
     char& back_char = str2.back();
-    std::cout << "The front char in str2 is : " << front_char << std::endl;
-    std::cout << "The back char in str2 is : " << back_char << std::endl;
+    std::cout << "the front char in str2 is : " << front_char << std::endl;
+    std::cout << "the back char in str2 is : " << back_char << std::endl;
 
     front_char = 'r';
     back_char = 'd';
@@ -75,24 +75,24 @@ int main(){
 	//c_str method
     /*
 	//doc : https://en.cppreference.com/w/cpp/string/basic_string/c_str
-	//returns const char * to the wrapped string. You shouldn't use 
+	//returns const char * to the wrapped string. you shouldn't use 
 	//it to modify data in the string.
-    std::string str2{"The Phoenix King"}; 
+    std::string str2{"the phoenix king"}; 
     const char * wrapped_c_string = str2.c_str();
-    std::cout << "Wrapped c string : " << wrapped_c_string << std::endl;
-    //wrapped_c_string[0] = 'e'; // Compiler error
+    std::cout << "wrapped c string : " << wrapped_c_string << std::endl;
+    //wrapped_c_string[0] = 'e'; // compiler error
     */
 
    //data()
-    std::string str2 { "Hello World"};
+    std::string str2 { "hello world"};
     
     char * data = str2.data();
-    std::cout << "Wrapped c string : " << data << std::endl;
+    std::cout << "wrapped c string : " << data << std::endl;
     
-    data[0] = 'B';// This also changes std::string.
+    data[0] = 'b';// this also changes std::string.
     
-    std::cout << "Wrapped c string (after modification) : " << data << std::endl;
-    std::cout << "Original string (after modification ) :" << str2 << std::endl;
+    std::cout << "wrapped c string (after modification) : " << data << std::endl;
+    std::cout << "original string (after modification ) :" << str2 << std::endl;
 
 
     return 0;
